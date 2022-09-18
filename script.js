@@ -5,10 +5,10 @@ var A = [1, 2, 3, 5, 6, 101, 8, 9, 11];
 function solution(A) {
     let j = 1;
     // write your code in JavaScript (Node.js 8.9.4)
-    let sortedArray = A.sort(function (a, b) { return a - b });
+    let sortedArray = A.sort((a, b) => a - b);
     console.log(sortedArray);
     for (let i = 0; i < sortedArray.length; i++) {
-        if (j < sortedArray[i]) {
+        if (j < sortedArray[i] && sortedArray[i] > 0) {
             console.log("Smallest number is: " + (j));
             return j;
         } else {
